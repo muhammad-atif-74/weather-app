@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weather</title>
+    <link rel="shortcut icon" href="assets/weather-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="custom-alert ">
+        <img src="assets/close.png" class="close" onclick="closeAlert()" alt="">
+        <div class="title">
+            <h2>3 Daily Downloads Limit Reached</h2>
+            <p class="question">How to download more?</p>
+        </div>
+        <h4 class="try-advance">Try the advance software to download without limit.</h4>
+        <div class="app-info">
+            <h4>Aqua Clip (Media Downloader)</h4>
+            <div class="reviews">
+                <div class="stars">
+                    <img src="assets/star.png" alt="">
+                    <img src="assets/star.png" alt="">
+                    <img src="assets/star.png" alt="">
+                    <img src="assets/star.png" alt="">
+                    <img src="assets/star.png" alt="">
+                </div>
+                <p class="rating">4.8</p>
+            </div>
+        </div>
+        <div class="button">Free Download</div>
+    </div>
+    <script>
+        function closeAlert() {
+            document.querySelector(".custom-alert").classList.remove("show")
+        }
+    </script>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <div class="icon">
+                    <img src="assets/sunny.png" alt="">
+                </div>
+            </div>
+            <div class="body">
+                <div class="title">
+                    <h1 class="heading currentWeather">Enter A Location</h1>
+                    <p class="sub-heading locationValue">To Find the Weather</p>
+                </div>
+                <div class="weather-info">
+                    <div class="w-info-side">
+                        <h3 class="info-title">Wind</h3>
+                        <h3 class="info-result windValue">TBD</h3>
+                    </div>
+                    <div class="w-info-side">
+                        <h3 class="info-title">Temperature</h3>
+                        <h3 class="info-result temperatureValue">TBD</h3>
+                    </div>
+                    <div class="w-info-side">
+                        <h3 class="info-title">Percipitation</h3>
+                        <h3 class="info-result percipValue">TBD</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <input type="text" placeholder="Enter Location" class="select-location">
+                </input>
+
+                <p class="developer">Developed by: muhammadatif</p>
+            </div>
+        </div>
+    </div>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGmSTq5kiqZQ6cEGes2d_p8grPr0hwYVI&libraries=places&callback=initMap"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

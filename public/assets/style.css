@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Hind&family=Poppins&display=swap&family=Nunito+Sans:opsz,wght@6..12,500');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg,#d96c00,#f68009);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .container{
+    width: 50%;
+    min-height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.38);
+    background-color: #fff;
+}
+@media screen and (max-width: 750px) {
+    .wrapper .container{
+        width: 90%;
+    } 
+}
+.container .header{
+    height: 120px;
+    background-color: #232323;
+    position: relative;
+}
+.container .header .icon{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -60px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    background-color: #ffffff;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon img{
+    width: 50%;
+    animation: rotate 25s infinite linear;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+.container .body{
+    padding-top: 80px;
+    text-align: center;
+
+}
+.body .sub-heading{
+    font-size: 20px;
+}
+.body .weather-info{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* border: solid firebrick; */
+
+}
+.weather-info .w-info-side{
+    width: 30%;
+}
+.weather-info .info-title{
+    margin-bottom: 10px;
+    color: #b6b6b6;
+}
+.weather-info .info-result{
+    font-size: 22px;
+}
+.container .footer{
+    width: 70%;
+    text-align: center;
+    padding: 35px 0;
+    display: block;
+    margin: 0 auto;
+    /* border: solid firebrick; */
+}
+.footer input{
+    width: 100%;
+    padding: 15px 19px;
+    border: 2px solid #b6b6b6;
+    outline: none;
+    font-size: 18px;
+    color: #232323;
+}
+
+.footer .developer{
+    margin-top: 15px;
+    font-size: 14px;
+    color: #b6b6b6;
+}
+
+/* CUSTOM ALERT----- */
+.custom-alert{
+    width: 550px;
+    background-color: #fff;
+    padding: 32px 25px;
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    z-index: 100;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    top: -500px;
+    transition: top 0.2s ease;
+}
+.custom-alert.show{
+    top: 15px;
+}
+.custom-alert .close{
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    width: 15px;
+    cursor: pointer;
+}
+.custom-alert .title{
+    margin-bottom: 18px;
+}
+.title .question{
+    font-size: 22px;
+    margin-top: 3px;
+    color: #7b7a7a;
+}
+.custom-alert .app-info{
+    margin: 15px auto;
+    display: block;
+    text-align: center;
+}
+.app-info .reviews{
+    display: flex;
+    justify-content: center;
+}
+.reviews .stars{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.stars img{
+    width: 20px;
+}
+.reviews .rating{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.custom-alert .button{
+    padding: 16px 20px;
+    border-radius: 18px;
+    background-color: rgb(230, 254, 246);
+    border: 1px solid rgb(0, 131, 179);
+    color: rgb(0, 131, 179);
+    width: 50%;
+    display: block;
+    margin: 7px auto;
+    cursor: pointer;
+    font-size: 17px;
+}
